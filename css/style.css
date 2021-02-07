@@ -22,6 +22,12 @@ main{
     justify-content: center;
 }
 
+/* resetting button properties */
+button{
+    border: none;
+    background-color: var(--primary);
+}
+
 #calculator{
     /* border: 2px solid red; */
     height: 94vh;
@@ -143,9 +149,12 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: 'Poppins';
 }
 .text{
     color: #72f0b1;
     font-size: 1.55rem;
     font-weight: bold;
 }
+
+/* animations */
