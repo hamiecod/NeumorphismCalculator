@@ -23,7 +23,7 @@ main{
 }
 
 /* resetting button properties */
-button{
+button, input{
     border: none;
     background-color: var(--primary);
 }
@@ -36,7 +36,7 @@ button{
     display: flex;
     box-shadow:
     12px 12px 24px rgba(0,0,0,0.25),
-    -6px -6px 12px rgba(251,255,253,0.92)
+    -12px -12px 20px rgba(251,255,253,0.92)
     ;
     z-index: -2;
     flex-direction: column;
@@ -151,10 +151,11 @@ button{
     justify-content: center;
     font-family: 'Poppins';
 }
-.text{
+button{
     color: #72f0b1;
     font-size: 1.55rem;
     font-weight: bold;
 }
-
-/* animations */
+.btn:hover{
+    color: blue;
+}
