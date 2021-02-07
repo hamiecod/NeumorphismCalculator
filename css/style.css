@@ -1,0 +1,136 @@
+/* CSS Reset */
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* declaring the variables */
+:root{
+    --primary: #d4ffea;
+}
+
+body{
+    background-color: var(--primary);
+    font-family: 'Poppins','Tw Cen MT';
+}
+
+main{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#calculator{
+    /* border: 2px solid red; */
+    height: 94vh;
+    width: 55vh;
+    border-radius: 28px;
+    display: flex;
+    box-shadow:
+    12px 12px 24px rgba(0,0,0,0.25),
+    -6px -6px 12px rgba(251,255,253,0.92)
+    ;
+    z-index: -2;
+    flex-direction: column;
+}
+
+/* the answer field */
+#answerBox{
+    width: 47vh;
+    height: 12vh;
+    border-radius: 20px;
+    margin: 18px auto;
+    /* margin-bottom: 60px; */
+    box-shadow:
+    inset 
+    -5px -5px 10px rgba(255, 255, 255, 0.73), 
+    inset 5px 5px 10px rgba(0, 0, 0, 0.25)
+    ;
+}
+
+/* all the buttons */
+#button-container{
+    display: grid;
+    grid-template-areas: 
+    'clear underroot percentage divide'
+    'seven eight nine multiply'
+    'four five six subtract'
+    'one two three add'
+    'zero zero decimal equal'
+    ;
+}
+
+/* the specific buttons */
+#clear{
+    grid-area: clear;
+}
+#underroot{
+    grid-area: underroot;
+}
+#percentage{
+    grid-area: percentage;
+}
+#divide{
+    grid-area: divide;
+}
+#seven{
+    grid-area: seven;
+}
+#eight{
+    grid-area: eight;
+}
+#nine{
+    grid-area: nine;
+}
+#multiply{
+    grid-area: multiply;
+}
+#four{
+    grid-area: four;
+}
+#five{
+    grid-area: five;
+}
+#six{
+    grid-area: six;
+}
+#subtract{
+    grid-area: subtract;
+}
+#one{
+    grid-area: one;
+}
+#two{
+    grid-area: two;
+}
+#three{
+    grid-area: three;
+}
+#add{
+    grid-area: add;
+}
+#zero{
+    grid-area: zero;
+    width: auto;
+}
+#decimal{
+    grid-area: decimal;
+}
+#equal{
+    grid-area: equal;
+}
+
+/* utility classes */
+.btn{
+    /* maxes the box a circle */
+    border-radius: 180px;
+    height: 56px;
+    width: 56px;
+    box-shadow: 
+    -8px -8px 16px rgba(255, 255, 255, 0.58), 
+    8px 8px 16px rgba(0, 0, 0, 0.25)
+    ;
+    margin: 1rem 10px;
+}
