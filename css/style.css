@@ -35,8 +35,8 @@ button, input{
     border-radius: 28px;
     display: flex;
     box-shadow:
-    12px 12px 24px rgba(0,0,0,0.25),
-    -12px -12px 20px rgba(251,255,253,0.92)
+    8px 8px 24px rgba(0,0,0,0.25),
+    -8px -8px 24px rgba(251,255,253,1)
     ;
     /* z-index: -2; */
     flex-direction: column;
@@ -54,6 +54,27 @@ button, input{
     -5px -5px 10px rgba(255, 255, 255, 0.73), 
     inset 5px 5px 10px rgba(0, 0, 0, 0.25)
     ;
+    display: flex;
+    color: #59f1a5;
+    font-size: 1.55rem;
+    font-weight: bold;
+    align-items: baseline;
+    justify-content: right;
+    overflow: hidden;
+    padding: 10px;
+    /* direction: rtl; */
+    font-size: 2.3rem;
+    font-family: Poppins;
+}
+
+#answerBox::-webkit-inner-spin-button,
+#answerBox::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+#answerBox:focus{
+    outline: none;
 }
 
 /* all the buttons */
@@ -152,8 +173,6 @@ button, input{
     font-family: 'Poppins';
     transition-property: all;
     transition-duration: 1.2s;
-}
-button{
     color: #72f0b1;
     font-size: 1.55rem;
     font-weight: bold;
