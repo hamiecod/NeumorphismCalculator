@@ -38,7 +38,7 @@ button, input{
     12px 12px 24px rgba(0,0,0,0.25),
     -12px -12px 20px rgba(251,255,253,0.92)
     ;
-    z-index: -2;
+    /* z-index: -2; */
     flex-direction: column;
 }
 
@@ -150,12 +150,14 @@ button, input{
     align-items: center;
     justify-content: center;
     font-family: 'Poppins';
+    transition-property: all;
+    transition-duration: 1.2s;
 }
 button{
     color: #72f0b1;
     font-size: 1.55rem;
     font-weight: bold;
 }
-.btn:hover{
-    color: blue;
+.btn:focus{
+    outline: none;
 }
