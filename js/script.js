@@ -15,6 +15,10 @@ for (let i = 0; i < buttons.length; i++){
         setTimeout(() => {
             trigger.style.boxShadow = '-8px -8px 16px rgba(255, 255, 255, 0.58), 8px 8px 16px rgba(0, 0, 0, 0.25)';
         }, 150);
+
+        let mySound = new Audio("../music/click1.mp3");
+        mySound.volume = 0.2;
+        mySound.play();
     })
 
     let screen = document.getElementById('answerBox');
