@@ -8,6 +8,7 @@
 /* declaring the variables */
 :root{
     --primary: #d4ffea;
+    --text-color: #32f898;
 }
 
 body{
@@ -55,24 +56,20 @@ button, input{
     inset 5px 5px 10px rgba(0, 0, 0, 0.25)
     ;
     display: flex;
-    color: #59f1a5;
+    color: var(--text-color);
     font-size: 1.55rem;
     font-weight: bold;
     align-items: baseline;
     justify-content: right;
     overflow: hidden;
     padding: 10px;
-    /* direction: rtl; */
+    direction: rtl;
     font-size: 2.3rem;
     font-family: Poppins;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
 }
 
-#answerBox::-webkit-inner-spin-button,
-#answerBox::-webkit-outer-spin-button{
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-}
 #answerBox:focus{
     outline: none;
 }
@@ -81,7 +78,7 @@ button, input{
 #button-container{
     display: grid;
     grid-template-areas: 
-    'clear underroot percentage divide'
+    'clear underroot delete divide'
     'seven eight nine multiply'
     'four five six subtract'
     'one two three add'
@@ -96,8 +93,8 @@ button, input{
 #underroot{
     grid-area: underroot;
 }
-#percentage{
-    grid-area: percentage;
+#delete{
+    grid-area: delete;
 }
 #divide{
     grid-area: divide;
@@ -156,6 +153,11 @@ button, input{
     padding: 20px;
 }
 
+#delete img{
+    height: 29.3435px;
+}
+
+
 /* utility classes */
 .btn{
     /* maxes the box a circle */
@@ -173,10 +175,25 @@ button, input{
     font-family: 'Poppins';
     transition-property: all;
     transition-duration: 1.2s;
-    color: #72f0b1;
+    color: #32f898;
     font-size: 1.55rem;
     font-weight: bold;
+    /* these animations are for glowing text */
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
 }
+
 .btn:focus{
     outline: none;
+}
+
+/* keyframes for text glow animation */
+@-webkit-keyframes glow{
+    from{
+        text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #c1ffa9, 0 0 4px #c1ffa9, 0 0 5px #c1ffa9, 0 0 6px #c1ffa9, 0 0 7px #c1ffa9;
+    }
+    to {
+        text-shadow: 0 0 1px #fff, 0 0 2px #cfffbc, 0 0 3px #cfffbc, 0 0 4px #cfffbc, 0 0 5px #cfffbc, 0 0 6px #cfffbc, 0 0 7px #cfffbc;
+    }
+    
 }

@@ -45,6 +45,14 @@ for (let i = 0; i < buttons.length; i++){
             screenValue = eval(screen.innerText);
             screen.innerText = screenValue;
         }
+        else if (buttonText == '√'){
+            screenValue = Math.sqrt(screen.innerText);
+            screen.innerText = screenValue;
+        }
+        // else if (buttonText == "%"){
+        //     screenValue = Math.(screen.innerText);
+        //     screen.innerText = screenValue;
+        // }
         else{
             screen.innerText += buttonText;
         }
