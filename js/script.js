@@ -17,25 +17,32 @@ for (let i = 0; i < buttons.length; i++){
         }, 150);
     })
 
-    buttons[i].addEventListener('click', ()=>{
-        let idStorer =buttons[i].id;
-        let trigger = document.getElementById(idStorer);
-        let answerBox = document.getElementById('answerBox');
-        let value = trigger.innerText;
-        answerBox.innerText += value;
+    let screen = document.getElementById('answerBox');
+    let screenValue = '';
+    buttons[i].addEventListener('click', (e)=>{
+        let buttonText = e.target.innerText;
+        console.log('Button text is ', buttonText);
 
-        if(document.getElementById(buttons[i].id).innerText = '×'){
-            answerBox.innerText += '*';
+        if(buttonText == '×'){
+            buttonText = '*';
+            screenValue = screen.innerText += buttonText;
+            screen.value = screenValue;
         }
-        else if(value == "AC"){
-            answerKey.innerText = '';
+        else if(buttonText == '÷'){
+            buttonText = '/';
+            screenValue = screen.innerText += buttonText;
+            screen.value = screenValue;
         }
-        else if(value == '='){
-            value = "";
-            answerBox.innerText = Math.eval(answerBox.innerText)
+        else if (buttonText == 'AC'){
+            screen.innerText = '';
+            screen.innerText = screenValue;
+        }
+        else if (buttonText == '='){
+            screenValue = eval(screen.innerText);
+            screen.innerText = screenValue;
+        }
+        else{
+            screen.innerText += buttonText;
         }
     })
 }
-
-// let answerBox = document.getElementById('answerBox');
-// if (answerBox.innerText)
