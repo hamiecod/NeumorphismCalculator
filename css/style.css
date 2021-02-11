@@ -210,3 +210,28 @@ button, input{
         0 0 7px #cfffbc;
     }
 }
+
+/* the mute button */
+#sound{
+    display: flex;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    margin: 40px;
+}
+
+#sound-img{
+    height: 40px;
+}
+
+#mute{
+    display: flex;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    margin: 40px;
+}
+
+#mute-img{
+    height: 40px;
+}

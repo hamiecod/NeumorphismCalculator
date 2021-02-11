@@ -18,7 +18,7 @@ for (let i = 0; i < buttons.length; i++){
 
         let mySound = new Audio("../music/click1.mp3");
         mySound.volume = 0.2;
-        mySound.play();
+        mySound.play;
     })
 
     let screen = document.getElementById('answerBox');
@@ -49,12 +49,17 @@ for (let i = 0; i < buttons.length; i++){
             screenValue = Math.sqrt(screen.innerText);
             screen.innerText = screenValue;
         }
-        // else if (buttonText == "%"){
-        //     screenValue = Math.(screen.innerText);
-        //     screen.innerText = screenValue;
-        // }
+        else if (buttonText == '') /* triggering the backspace button */{
+            buttonText = '';
+            // above line is written so that the answer field is not affected when the backspace button is pressed
+            let len = screen.innerText.length;
+            let back = screen.innerText.substring(0, len-1);
+            screenValue = screen.innerText = back;
+            screen.value = screenValue;
+        }
         else{
             screen.innerText += buttonText;
         }
+        
     })
 }
