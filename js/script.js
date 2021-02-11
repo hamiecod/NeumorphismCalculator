@@ -1,4 +1,4 @@
-var buttons = document.getElementsByClassName('btn');
+var buttons = document.querySelectorAll('button');
 
 // for loop to set different CSS properties
 for (let i = 0; i < buttons.length; i++){
@@ -16,6 +16,8 @@ for (let i = 0; i < buttons.length; i++){
             trigger.style.boxShadow = '-8px -8px 16px rgba(255, 255, 255, 0.58), 8px 8px 16px rgba(0, 0, 0, 0.25)';
         }, 150);
 
+
+        // Adding click sound to the buttons
         var mySound = new Audio("../music/click1.mp3");
         let sound = document.getElementById('sound');
         let mute = document.getElementById('mute');
@@ -37,8 +39,10 @@ for (let i = 0; i < buttons.length; i++){
         }
     })
 
+    // Configuring that the input is stored in the box
     let screen = document.getElementById('answerBox');
     let screenValue = '';
+    let delImg = document.getElementById('delete-img');
     buttons[i].addEventListener('click', (e)=>{
         let buttonText = e.target.innerText;
         console.log('Button text is ', buttonText);
@@ -65,7 +69,7 @@ for (let i = 0; i < buttons.length; i++){
             screenValue = Math.sqrt(screen.innerText);
             screen.innerText = screenValue;
         }
-        else if (buttonText == '') /* triggering the backspace button */{
+        else if (buttonText == '←') /* triggering the backspace button */{
             buttonText = '';
             // above line is written so that the answer field is not affected when the backspace button is pressed
             let len = screen.innerText.length;
@@ -76,6 +80,11 @@ for (let i = 0; i < buttons.length; i++){
         else{
             screen.innerText += buttonText;
         }
-        
     })
+}
+
+// setting default values
+window.onload = ()=>{
+    sound.style.display = 'flex'; 
+    mute.style.display = 'none';
 }
