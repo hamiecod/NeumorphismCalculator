@@ -36,8 +36,8 @@ button, input{
     border-radius: 28px;
     display: flex;
     box-shadow:
-    8px 8px 24px rgba(0,0,0,0.25),
-    -8px -8px 24px rgba(251,255,253,1)
+    8px 8px 12px rgba(0,0,0,0.25),
+    -8px -8px 12px rgba(251,255,253,1)
     ;
     /* z-index: -2; */
     flex-direction: column;
@@ -218,10 +218,15 @@ button, input{
     right: 0px;
     bottom: 0px;
     margin: 40px;
+    align-items: center;
+    justify-content: center;
 }
 
 #sound-img{
     height: 40px;
+    position: absolute;
+    top: 8px;
+    right: 5px;
 }
 
 #mute{
@@ -230,8 +235,13 @@ button, input{
     right: 0px;
     bottom: 0px;
     margin: 40px;
+    align-items: center;
+    justify-content: center;
 }
 
 #mute-img{
     height: 40px;
+    position: absolute;
+    top: 8px;
+    right: 7px;
 }

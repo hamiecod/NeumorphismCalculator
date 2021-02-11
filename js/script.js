@@ -16,9 +16,25 @@ for (let i = 0; i < buttons.length; i++){
             trigger.style.boxShadow = '-8px -8px 16px rgba(255, 255, 255, 0.58), 8px 8px 16px rgba(0, 0, 0, 0.25)';
         }, 150);
 
-        let mySound = new Audio("../music/click1.mp3");
-        mySound.volume = 0.2;
-        mySound.play;
+        var mySound = new Audio("../music/click1.mp3");
+        let sound = document.getElementById('sound');
+        let mute = document.getElementById('mute');
+        sound.addEventListener('click', ()=>{
+            sound.style.display = 'none';
+            mute.style.display = 'flex';
+        })
+        mute.addEventListener('click', ()=>{
+            mute.style.display = 'none';
+            sound.style.display = 'flex';
+        })
+        if(sound.style.display == 'flex' && mute.style.display == 'none'){
+            mySound.volume= 0.2;
+            mySound.play();
+        }
+        else if(mute.style.display == 'flex' && sound.style.display == 'none'){
+            mySound.volume = 0;
+            mySound.play();
+        }
     })
 
     let screen = document.getElementById('answerBox');
