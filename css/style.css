@@ -5,6 +5,9 @@
     box-sizing: border-box;
 }
 
+/* importing the fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 /* declaring the variables */
 :root{
     --primary: #d4ffea;
@@ -13,7 +16,7 @@
 
 body{
     background-color: var(--primary);
-    font-family: 'Poppins','Tw Cen MT';
+    font-family: 'Poppins', sans-serif;
 }
 
 main{
