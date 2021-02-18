@@ -156,10 +156,10 @@ button, input{
     padding: 20px;
 }
 
-#delete img{
-    height: 29.3435px;
+#delete {
+  /* height: 29.3435px; */
+  background: url(../img/delete.png) center/29.3435px no-repeat;
 }
-
 
 /* utility classes */
 .btn{
@@ -247,4 +247,9 @@ button, input{
     position: absolute;
     top: 8px;
     right: 7px;
+}
+
+#delete-text {
+  display: block;
+  font-size: 0.1px;
 }
